@@ -1,7 +1,13 @@
+var groupCellsData = Number.parseInt(jQuery(".main-carousel").attr("data-group"));
+var groupCellsValue = false; 
+
+if(groupCellsData > 0){
+    groupCellsValue = groupCellsData;
+}
+
 jQuery('.main-carousel').flickity({
     // options
     cellAlign: 'left',
-    contain: true,
     pageDots: false,
-    freeScroll: true
-  });
+    groupCells: groupCellsValue
+});

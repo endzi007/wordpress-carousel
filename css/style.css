@@ -3,13 +3,23 @@
 }
 
 .carousel-cell {
-  width: 66%;
+  width: 25%;
   height: 200px;
   margin-right: 10px;
   background: #8C8;
   border-radius: 5px;
   counter-increment: gallery-cell;
   display: flex; 
-  flex-direction: column; 
-  font-size: 0.7em;
+  font-size: 0.9em;
+}
+
+.carousel-cell p{
+  display: block;
+  width: 100%;
+  background-color: rgba(0,0,0,0.7)!important;
+  color: white!important;
+  padding-top: 10px!important;
+  padding-bottom: 10px!important;
+  text-align: center;
+  align-self: center;
 }
