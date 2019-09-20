@@ -4,22 +4,24 @@
 
 .carousel-cell {
   width: 25%;
-  height: 200px;
   margin-right: 10px;
-  background: #8C8;
   border-radius: 5px;
   counter-increment: gallery-cell;
-  display: flex; 
+  display: grid; 
+  grid-template-columns: 100%;
   font-size: 0.9em;
 }
 
 .carousel-cell p{
   display: block;
   width: 100%;
-  background-color: rgba(0,0,0,0.7)!important;
-  color: white!important;
+  background-color: white;
+  color: black!important;
   padding-top: 10px!important;
   padding-bottom: 10px!important;
-  text-align: center;
-  align-self: center;
+  align-self: end;
+}
+.carousel-cell a{
+	color: black!important;
+	font-weight: bold;
 }
