@@ -9,5 +9,8 @@ jQuery('.main-carousel').flickity({
     // options
     cellAlign: 'left',
     pageDots: false,
-    groupCells: groupCellsValue
+    groupCells: groupCellsValue,
+	freeScroll: true, 
+	wrapAround: true,
+	prevNextButtons: false
 });
