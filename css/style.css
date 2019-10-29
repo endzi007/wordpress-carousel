@@ -25,3 +25,19 @@
 	color: black!important;
 	font-weight: bold;
 }
+
+.glight-container{
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5px;
+}
+
+.glight-container a{
+  height: 120px!important;
+  overflow: hidden;
+}
+
+.glight-container > img {
+  height: 100%;
+  width: 100%;
+}

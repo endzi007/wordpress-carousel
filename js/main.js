@@ -5,6 +5,12 @@ if(groupCellsData > 0){
     groupCellsValue = groupCellsData;
 }
 
+var lightbox = GLightbox({
+    touchNavigation: true,
+    loopAtEnd: true
+});
+
+
 jQuery('.main-carousel').flickity({
     // options
     cellAlign: 'left',
@@ -13,4 +19,8 @@ jQuery('.main-carousel').flickity({
 	freeScroll: true, 
 	wrapAround: true,
 	prevNextButtons: false
+});
+
+lightbox.onOpen(function(){
+    console.log("oppened");
 });
