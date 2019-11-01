@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: Divi Carousel
+Plugin Name: Wordpress Carousel
 Plugin URI: http://enisjasarovic.me
-Description: Display post category in carousel
-Version: 1.0.0
+Description: Display images and posts in any page or widget, like caraousel gallery
+Version: 1.0.1
 Author: Enis Jasarovic
 Author URI: http://enisjasarovic.me
 */
@@ -15,7 +15,22 @@ if(!defined('ABSPATH')){
 
 // Load Class
 require_once(plugin_dir_path(__FILE__).'/includes/ng-carousel-scripts.php');
+$pluginName = plugin_basename(__FILE__);
+add_action('init', 'wporg_shortcodes_init');
 
+add_filter("plugin_action_link_$pluginName", "settingsLink" );
+function activate(){
+
+}
+
+function deactivate(){
+  
+}
+
+
+function settingsLink ($links){
+
+}
 
 function wporg_shortcodes_init(){
     add_shortcode('ng_carousel_enis', 'registerNgCarouselShortcode');
@@ -41,6 +56,7 @@ function registerNgCarouselShortcode ($attr){
       return $htmlContent;
 }
 
+
 function setupGridElements($cat, $height){
   $htmlContent = "<div class='glight-container'>";
   $cat_id = get_cat_ID($cat);
@@ -60,7 +76,6 @@ function setupGridElements($cat, $height){
   $htmlContent .= "</div>";
   return $htmlContent;
 }
-
 
 
 function setupCarouselElements($newAtts){
@@ -101,4 +116,13 @@ function setupCarouselElements($newAtts){
     return $htmlContent;
 }
 
-add_action('init', 'wporg_shortcodes_init');
+function registerAdminPage(){
+  add_menu_page('Enis', "Enis 2", "manage_options", "enis_plugin", "adminIndex", "dashicons-tickets-alt", 110);
+}
+
+function adminIndex(){
+  require_once(plugin_dir_path(__FILE__).'/templates/admin.php');
+}
+add_action("admin_menu", "registerAdminPage");
+register_activation_hook(plugin_dir_path(__FILE__)."/".$pluginName, "activate");
+register_deactivation_hook(plugin_dir_path(__FILE__)."/".$pluginName, "deactivate");
