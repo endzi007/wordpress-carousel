@@ -3,7 +3,7 @@
 Plugin Name: Wordpress Carousel
 Plugin URI: http://enisjasarovic.me
 Description: Display images and posts in any page or widget, like caraousel gallery
-Version: 1.0.2
+Version: 1.0.3
 Author: Enis Jasarovic
 Author URI: http://enisjasarovic.me
 */
