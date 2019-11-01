@@ -1,8 +1,5 @@
-# YouTube Subs Wordpress Widget
+# Display posts like gallery of images with Lightbox or like Carousel
 
 Widget to display carousel of posts, images and more..
 
-Just use shortcode [ng_carousel_enis naslov="" kategorija="" grupe="0"]
-
-### Version
-1.0.0
+Just use shortcode [ng_carousel_enis naslov="" kategorija="" grupe="0" type="carousel or grid"]
